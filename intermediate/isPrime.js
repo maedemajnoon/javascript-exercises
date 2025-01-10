@@ -11,5 +11,17 @@
  */
 
 // Write your solution here
-
+function isPrime(num) {
+  let temp = 0;
+  for (let i = 0; i <= num; i++) {
+    if (num % i == 0) {
+      temp = temp + 1;
+    }
+  }
+  if (temp == 2) {
+    return true;
+  } else {
+    return false;
+  }
+}
 module.exports = isPrime;
