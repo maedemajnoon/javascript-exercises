@@ -12,7 +12,7 @@
 function sumOfDigits(num) {
   let str_num_array = num.toString().split("");
   let num_array = [];
-  str_num_array.forEach((element, index) => {
+  str_num_array.forEach((element) => {
     num_array.push(Number(element));
   });
   let sum = num_array.reduce((acc, curr) => {
