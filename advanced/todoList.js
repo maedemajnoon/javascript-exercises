@@ -13,5 +13,17 @@
  */
 
 // Write your solution here
-
+let tasks = [];
+function addTask(task) {
+  tasks.push(task);
+}
+function removeTask(task) {
+  if (tasks.includes(task)) {
+    let temp = tasks.indexOf(task);
+    tasks.splice(temp, 1);
+  }
+}
+function showTasks() {
+  return tasks;
+}
 module.exports = { addTask, removeTask, showTasks };

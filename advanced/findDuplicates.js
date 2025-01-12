@@ -11,5 +11,4 @@
  */
 
 // Write your solution here
-
 module.exports = findDuplicates;
