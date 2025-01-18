@@ -11,5 +11,6 @@
  */
 
 // Write your solution here
+function numberToWords(num) {}
 
 module.exports = numberToWords;

@@ -19,10 +19,14 @@ function addUser(user) {
   users.push(user);
 }
 function removeUser(user) {
-  if (users.includes(user)) {
-    let temp = users.indexOf(user);
-    users.splice(temp, 1);
-  }
+  // if (users.includes(user)) {
+  //   ////users.filter((item) => item !== user);
+  //   let temp = users.indexOf(user);
+  //   users.splice(temp, 1);
+  // }
+  users = users.filter((u) => {
+    u !== user;
+  });
 }
 function showUsers() {
   return users;
