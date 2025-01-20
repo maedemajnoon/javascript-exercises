@@ -17,14 +17,14 @@
  * This exercise involves DOM manipulation. Ensure you have an HTML file with a container element
  * (e.g., `<div id="clock"></div>`) to display the clock.
  */
-<html>
-  <body>
-    <div id="clock"></div>
-  </body>
-</html>;
-const clock = document.querySelector("clock");
-function digitalClock() {
-  clock.addEventListener(() => {});
-}
+let clock = document.querySelector("#clock");
 
+function digitalClock() {
+  clock.addEventListener("click", function () {
+    setInterval(() => {
+      let d = new Date(Date.now());
+      clock.textContent = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+    }, 1000);
+  });
+}
 module.exports = digitalClock;

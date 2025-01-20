@@ -13,8 +13,9 @@
 function generateCombinations(array) {
   let pushed_array = [];
   for (let i = 0; i <= array.length; i++) {
-    pushed_array.push([array[i]]);
-    pushed_array.push([array[i], array[i + 1]]);
+    if (!pushed_array.includes([i])) {
+      pushed_array.push[i];
+    }
   }
   return pushed_array;
 }
