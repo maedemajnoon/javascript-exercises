@@ -13,7 +13,7 @@
 function generateCombinations(array) {
   let pushed_array = [];
   for (let i = 0; i <= array.length; i++) {
-    if (!pushed_array.includes([i])) {
+    if (!pushed_array.includes(i)) {
       pushed_array.push[i];
     }
   }
