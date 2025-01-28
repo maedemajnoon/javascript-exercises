@@ -19,10 +19,10 @@
  */
 let clock = document.querySelector("#clock");
 
-function digitalClock() {
+function digitalClock(time) {
   clock.addEventListener("click", function () {
     setInterval(() => {
-      let d = new Date(Date.now());
+      let d = new Date(time);
       clock.textContent = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
     }, 1000);
   });

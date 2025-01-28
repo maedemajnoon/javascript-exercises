@@ -11,11 +11,6 @@
  */
 
 // Write your solution here
-function numberToWords(num) {
-  if (num === 0) {
-    return "zero";
-  } else if (num < 20) {
-  }
-}
+function numberToWords(num) {}
 
 module.exports = numberToWords;
