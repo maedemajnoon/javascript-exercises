@@ -13,3 +13,23 @@
 // Write your solution here
 
 module.exports = findDuplicates;
+
+const findDuplicates = (array) => {
+    const seen = new Set();
+    const duplicates = new Set();
+  
+    for (const item of array) {
+      if (seen.has(item)) {
+        duplicates.add(item);
+      } else {
+        seen.add(item);
+      }
+    }
+    
+    return [...duplicates];
+  };
+  
+  console.log(findDuplicates([1, 2, 2, 3, 4, 4])); 
+  console.log(findDuplicates([1, 1, 1, 2, 3]));   
+  console.log(findDuplicates([1, 2, 3]));           
+  

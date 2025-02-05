@@ -13,3 +13,14 @@
  */
 
 module.exports = isPalindrome;
+
+const isPalindrome = (number) => {
+    const word = number.toString();
+    const reversedWord = word.split('').reverse().join('');
+    return word === reversedWord;
+  };
+  
+  console.log(isPalindrome(121));  
+  console.log(isPalindrome(-121)); 
+  console.log(isPalindrome(1321)); 
+  

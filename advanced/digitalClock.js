@@ -20,3 +20,26 @@
 
 
 module.exports = digitalClock;
+
+const digitalClock = () => {
+    const now = new Date();
+    let hours = now.getHours().toString().padStart(2, "0");
+    let minutes = now.getMinutes().toString().padStart(2, "0");
+    let seconds = now.getSeconds().toString().padStart(2, "0");
+  
+    const time = `${hours}:${minutes}:${seconds}`;
+  
+    let clockElement = document.getElementById("clock");
+  
+    if (!clockElement) {
+      clockElement = document.createElement("div");
+      clockElement.id = "clock";
+      document.body.appendChild(clockElement);
+    }
+  
+    clockElement.textContent = time;
+  };
+  
+  setInterval(digitalClock, 1000);
+  digitalClock();
+  

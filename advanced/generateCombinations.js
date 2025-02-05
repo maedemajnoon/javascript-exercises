@@ -12,3 +12,16 @@
  */
 
 module.exports = generateCombinations;
+
+const generateCombinations = (array) => {
+    const combinations = [];
+  
+    for (let i = 0; i < array.length; i++) {
+        for (let j = i + 1; j <= array.length; j++) {
+            combinations.push(array.slice(i, j));
+        }
+    }
+    return combinations;
+};
+
+console.log(generateCombinations([1, 2, 3]));  

@@ -11,3 +11,7 @@
  */
 
 module.exports = sumOfDigits;
+
+const sumOfDigits = (number) => [...String(number)].reduce((sum, digit) => sum + Number(digit), 0);
+
+console.log(sumOfDigits(123)); 

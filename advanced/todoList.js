@@ -15,3 +15,32 @@
 // Write your solution here
 
 module.exports = { addTask, removeTask, showTasks };
+
+let tasks = [];
+
+beforeEach(() => {
+    tasks = [];
+});
+
+const addTask = (task) => {
+    tasks.push(task);
+    return `Task added: ${task}`;
+};
+
+const removeTask = (task) => {
+    const index = tasks.indexOf(task);
+    if (index !== -1) {
+        tasks.splice(index, 1);
+        return `Task removed: ${task}`;
+    }
+    return `Task ${task} not found`;
+};
+
+const showTasks = () => (tasks.length > 0 ? tasks : "No tasks available!");
+
+console.log(addTask("Buy groceries"));
+console.log(addTask("Study JavaScript"));
+console.log(showTasks());
+console.log(removeTask("Buy groceries"));
+console.log(showTasks());
+console.log(removeTask("Exercise"));
