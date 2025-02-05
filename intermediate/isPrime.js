@@ -13,3 +13,8 @@
 // Write your solution here
 
 module.exports = isPrime;
+
+const isPrime = (num) => num > 1 && [...Array(Math.floor(Math.sqrt(num)) + 1).keys()].slice(2).every(i => num % i !== 0);
+
+console.log(isPrime(53)); 
+console.log(isPrime(78)); 
