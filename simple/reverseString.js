@@ -13,3 +13,7 @@
 // Write your solution here
 
 module.exports = reverseString;
+
+const reverseString = (word) => word.split("").reverse().join("");
+
+console.log(reverseString("سلام23"));

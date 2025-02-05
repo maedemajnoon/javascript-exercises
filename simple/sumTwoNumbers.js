@@ -11,8 +11,9 @@
  */
 
 // Write your solution here
-function sum(a, b) {
-  return a + b;
-}
 
 module.exports = sum;
+
+const sum = (a, b) => a + b;
+
+console.log(sum(2, 9));

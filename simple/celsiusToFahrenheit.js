@@ -13,3 +13,11 @@
 // Write your solution here
 
 module.exports = celsiusToFahrenheit;
+
+function celsiusToFahrenheit(temp) {
+    return (temp * (9/5) + 32)
+}
+
+console.log(celsiusToFahrenheit(0));
+console.log(celsiusToFahrenheit(100));
+console.log(celsiusToFahrenheit(32));
