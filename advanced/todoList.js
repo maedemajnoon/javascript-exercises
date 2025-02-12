@@ -18,13 +18,7 @@ function addTask(task) {
   tasks.push(task);
 }
 function removeTask(task) {
-  // if (tasks.includes(task)) {
-  //   let temp = tasks.indexOf(task);
-  //   tasks.splice(temp, 1);
-  // }
-  tasks = tasks.filter((t) => {
-    t !== task;
-  });
+  tasks = tasks.filter((t) => t !== task);
 }
 function showTasks() {
   return tasks;

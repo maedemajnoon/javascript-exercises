@@ -12,10 +12,6 @@
 
 // Write your solution here
 function sumArray(arr) {
-  let temp = 0;
-  arr.forEach((i) => {
-    temp = temp + i;
-  });
-  return temp;
+  return arr.reduce((prev, curr) => prev + curr, 0);
 }
 module.exports = sumArray;

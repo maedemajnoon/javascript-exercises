@@ -18,10 +18,6 @@ function isPrime(num) {
       temp = temp + 1;
     }
   }
-  if (temp == 2) {
-    return true;
-  } else {
-    return false;
-  }
+  return temp == 2 ? true : false;
 }
 module.exports = isPrime;

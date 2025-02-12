@@ -10,14 +10,9 @@
  * sumOfDigits(987) should return 24 (9 + 8 + 7).
  */
 function sumOfDigits(num) {
-  let str_num_array = num.toString().split("");
-  let num_array = [];
-  str_num_array.forEach((element) => {
-    num_array.push(Number(element));
-  });
-  let sum = num_array.reduce((acc, curr) => {
-    return acc + curr;
-  }, 0);
-  return sum;
+  return num
+    .toString()
+    .split("")
+    .reduce((prev, curr) => prev + Number(curr), 0);
 }
 module.exports = sumOfDigits;

@@ -10,8 +10,6 @@
  * reverseString("world") should return "dlrow".
  */
 
-const { TestEnvironment } = require("jest-environment-jsdom");
-
 // Write your solution here
 function reverseString(str) {
   return str.split("").reverse().join("");

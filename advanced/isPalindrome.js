@@ -12,36 +12,17 @@
  * isPalindrome(10) should return false.
  */
 function isPalindrome(num) {
-  let numArray = num.toString().split("");
-  if (num < 0) return false;
-  if (num < 10) return true;
-  if (num < 100) {
-    if (numArray[0] === numArray[1]) {
-      return true;
-    } else {
-      return false;
-    }
+  if (num < 0) {
+    return false;
   }
-  if (num < 1000) {
-    if (numArray[0] === numArray[2]) {
-      return true;
-    } else {
-      return false;
-    }
+  if (num < 10) {
+    return true;
   }
-  if (num < 10000) {
-    if (numArray[0] === numArray[3] && numArray[1] === numArray[2]) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-  if (num < 100000) {
-    if (numArray[0] === numArray[4] && numArray[1] === numArray[3]) {
-      return true;
-    } else {
-      return false;
-    }
+  let reversedNum = Number(num.toString().split("").reverse().join(""));
+  if (num === reversedNum) {
+    return true;
+  } else {
+    return false;
   }
 }
 module.exports = isPalindrome;

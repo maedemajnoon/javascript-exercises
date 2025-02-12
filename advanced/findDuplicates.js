@@ -12,14 +12,13 @@
 
 // Write your solution here
 function findDuplicates(array) {
+  let flagged_array = [];
   let pushed_array = [];
-  let temp;
-  for (let i = 0; i < array.length; i++) {
-    temp = array[i];
-    for (let j = i + 1; j <= array.length; j++) {
-      if (array[j] === temp && !pushed_array.includes(temp)) {
-        pushed_array.push(temp);
-      }
+  for (let i = 0; i <= array.length; i++) {
+    if (flagged_array.includes(array[i]) && !pushed_array.includes(array[i])) {
+      pushed_array.push(array[i]);
+    } else {
+      flagged_array.push(array[i]);
     }
   }
   return pushed_array;
