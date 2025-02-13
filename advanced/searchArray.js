@@ -10,17 +10,5 @@
  * searchArray([1, 2, 3, 4], 3) should return true.
  * searchArray([1, 2, 3, 4], 5) should return false.
  */
-function searchArray(array, target) {
-  let temp = 0;
-  for (let item of array) {
-    if (item == target) {
-      temp++;
-    }
-  }
-  if (temp > 0) {
-    return true;
-  } else {
-    return false;
-  }
-}
+const searchArray = (array, target) => array.includes(target);
 module.exports = searchArray;
