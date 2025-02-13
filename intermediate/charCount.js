@@ -11,14 +11,5 @@
  */
 
 // Write your solution here
-function charCount(str, char) {
-  let temp = 0;
-  let strArr = str.split("");
-  strArr.forEach((i) => {
-    if (i.includes(char)) {
-      temp++;
-    }
-  });
-  return temp;
-}
+const charCount = (str, char) => [...str].filter(item => item === char).length;
 module.exports = charCount;
