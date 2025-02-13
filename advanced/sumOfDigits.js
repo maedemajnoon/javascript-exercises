@@ -9,15 +9,8 @@
  * sumOfDigits(123) should return 6 (1 + 2 + 3).
  * sumOfDigits(987) should return 24 (9 + 8 + 7).
  */
-function sumOfDigits(num) {
-  let str_num_array = num.toString().split("");
-  let num_array = [];
-  str_num_array.forEach((element) => {
-    num_array.push(Number(element));
-  });
-  let sum = num_array.reduce((acc, curr) => {
-    return acc + curr;
-  }, 0);
-  return sum;
+const sumOfDigits = (num) => {
+    let num_array = num.toString().split("").map(Number); // map function convert string items of array to Number
+    return num_array.reduce((acc, curr) =>  acc + curr , 0);
 }
 module.exports = sumOfDigits;
