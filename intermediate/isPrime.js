@@ -11,17 +11,16 @@
  */
 
 // Write your solution here
-function isPrime(num) {
-  let temp = 0;
-  for (let i = 0; i <= num; i++) {
-    if (num % i == 0) {
-      temp = temp + 1;
-    }
+const isPrime = (num) => {
+  if (num <= 1) return false; 
+
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+      if (num % i === 0) {
+          return false; 
+      }
   }
-  if (temp == 2) {
-    return true;
-  } else {
-    return false;
-  }
-}
+
+  return true; 
+};
+
 module.exports = isPrime;
