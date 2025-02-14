@@ -12,14 +12,10 @@
  * isPalindrome(10) should return false.
  */
 
+function isPalindrome(num) {
+  return num < 0 ? false: num.toString() === num.toString().split("").reverse().join("");
+}
 module.exports = isPalindrome;
-
-const isPalindrome = (number) => {
-    const word = number.toString();
-    const reversedWord = word.split('').reverse().join('');
-    return word === reversedWord;
-  };
-  
   console.log(isPalindrome(121));  
   console.log(isPalindrome(-121)); 
   console.log(isPalindrome(1321)); 
