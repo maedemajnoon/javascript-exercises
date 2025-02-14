@@ -18,7 +18,7 @@ function isPalindrome(num) {
   if (num < 10) {
     return true;
   }
-  let reversedNum = Number(num.toString().split("").reverse().join(""));
+  reversedNum = Number(num.toString().split("").reverse().join(""));
   if (num === reversedNum) {
     return true;
   } else {
