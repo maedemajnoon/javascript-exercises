@@ -12,17 +12,8 @@
  * isPalindrome(10) should return false.
  */
 function isPalindrome(num) {
-  if (num < 0) {
-    return false;
-  }
-  if (num < 10) {
-    return true;
-  }
-  reversedNum = Number(num.toString().split("").reverse().join(""));
-  if (num === reversedNum) {
-    return true;
-  } else {
-    return false;
-  }
+  return num < 0
+    ? false
+    : num.toString() === num.toString().split("").reverse().join("");
 }
 module.exports = isPalindrome;
